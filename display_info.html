@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    RED.nodes.registerType('display_info', {
+        category: 'processing modular',
+        color: '#87CEEB',
+        defaults: {
+
+            msg_info: {
+                value: ""
+            }
+
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "arrow-in.png",
+        label: "display info",
+        paletteLabel: "display info",
+
+    });
+</script>
+
+<script type="text/html" data-template-name="display_info">
+
+    <div class="form-row node-input-msg_info">
+        <label for="node-input-msg_info"><i class="fa fa-random"></i> msg_info </label>
+        <textarea type="text" id="node-input-msg_info">
+    </div>
+
+</script>
+
+<script type="text/html" data-help-name="display_info">
+    <p>wait press start button </p>
+</script>

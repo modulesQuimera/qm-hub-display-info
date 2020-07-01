@@ -1,0 +1,25 @@
+{
+  "name": "qm-hub-display-info",
+  "version": "1.0.0",
+  "description": "Display Info",
+  "main": "display_info.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modulesQuimera/qm-hub-display-info.git"
+  },
+  "keywords": ["quimera", "hub", "JIG"],
+  "author": "HUB-LSE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modulesQuimera/qm-hub-display-info/issues"
+  },
+  "homepage": "https://github.com/modulesQuimera/qm-hub-display-info#readme",
+  "node-red": {
+    "nodes": {
+        "display_info": "display_info.js"
+    }
+  }
+}
