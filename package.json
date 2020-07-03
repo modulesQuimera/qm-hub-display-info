@@ -1,6 +1,6 @@
 {
   "name": "qm-hub-display-info",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Display Info",
   "main": "display_info.js",
   "scripts": {

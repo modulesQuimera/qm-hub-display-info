@@ -1,9 +1,11 @@
 <script type="text/javascript">
     RED.nodes.registerType('display_info', {
-        category: 'processing modular',
-        color: '#87CEEB',
+        category: 'Processing Module',
+        color: '#a6bbcf',
         defaults: {
-
+            name:{
+                value: ""
+            },
             msg_info: {
                 value: ""
             }
@@ -11,20 +13,96 @@
         },
         inputs: 1,
         outputs: 1,
-        icon: "arrow-in.png",
-        label: "display info",
-        paletteLabel: "display info",
+        icon: "./icons/Display_Info.svg",
+        label:  function() { return this.name || "Display Info"},
+        paletteLabel: "Display Info",
 
     });
 </script>
 
-<script type="text/html" data-template-name="display_info">
 
-    <div class="form-row node-input-msg_info">
-        <label for="node-input-msg_info"><i class="fa fa-random"></i> msg_info </label>
-        <textarea type="text" id="node-input-msg_info">
+
+<style>
+/* 
+    select#node-input-mapeamento {
+        width: 100%;
+        display: none;
+    }
+
+    a#node-input-lookup-mapeamento {
+    position: absolute;
+    right: -30px !important;
+    top: 0px;
+    } */
+
+    label{
+        width: 50% !important;
+        margin-bottom: 2px !important;
+    }
+
+    .columm{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    hr {
+    width: 40% !important;
+    float: left !important;
+    }
+
+    .hr-div-display-info{
+        display: flex !important;
+        justify-content: space-between !important;
+        margin-top: 250px !important;
+    }
+
+    .optional{
+        height: max-content !important;
+        margin-top: 10px !important;
+    }
+
+    .descript{
+        text-align: center;
+    }
+
+</style>
+
+<script type="text/html" data-template-name="display_info">
+    <div class="form-row columm">
+        <strong class="descript">    
+        Used for step instruction.
+        </strong>
     </div>
 
+
+
+<!-- -->
+    <div class="form-row columm  node-input-msg_info ">  
+        <label for="node-input-msg_info"><i class="fa fa-random"></i> msg_info </label>
+        <textarea style="width: 70%; !important" type="text" id="node-input-msg_info"></textarea>
+    </div>
+
+    <!-- <div class="form-row">
+        <label for="node-input-msg_info" style="width: max-content; !important"><i class="icon-tag"></i>msg_info:</label>
+        <textarea type="text" id="node-input-msg_info" style="margin-left: 8px;  !important "></textarea>
+    </div> -->
+
+
+    <div class="hr-div-display-info">
+        <hr>
+        <span class="optional">Optional</span>
+        <hr>
+    </div>
+
+    <div class="form-row columm">
+        <label style="width: 50% !important;" for="node-input-name" ><i class="fa fa-tag"></i> Component Nickname</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    
+
+
+   
 </script>
 
 <script type="text/html" data-help-name="display_info">
