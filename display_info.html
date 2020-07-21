@@ -1,7 +1,7 @@
 <script type="text/javascript">
     RED.nodes.registerType('display_info', {
         category: 'Processing Module',
-        color: '#a6bbcf',
+        color: '#ff0028',
         defaults: {
             name:{
                 value: ""
@@ -13,8 +13,8 @@
         },
         inputs: 1,
         outputs: 1,
-        icon: "Display_Info.svg",
-        label:  function() { return this.name || "Display Info"},
+        icon: "PCS_Modular.svg",
+        label:  function() { return this.name? "Display Info - " + this.name: "Display Info"},
         paletteLabel: "Display Info",
 
     });
@@ -58,7 +58,7 @@
 <script type="text/html" data-template-name="display_info">
     <div class="form-row columm">
         <strong class="descript">    
-        Used for step instruction.
+            Instructions to be shown in the jig diplay.
         </strong>
     </div>
     <div class="form-row columm  node-input-msg_info ">  
@@ -77,5 +77,5 @@
 </script>
 
 <script type="text/html" data-help-name="display_info">
-    <p>wait press start button </p>
+    <p>Instructions to be shown in the jig diplay.</p>
 </script>
