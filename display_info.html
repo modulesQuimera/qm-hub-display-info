@@ -13,7 +13,7 @@
         },
         inputs: 1,
         outputs: 1,
-        icon: "PCS_Modular.svg",
+        icon: "CPU.svg",
         label:  function() { return this.name? "Display Info - " + this.name: "Display Info"},
         paletteLabel: "Display Info",
 
@@ -24,7 +24,7 @@
 
 <style>
     label{
-        width: 50% !important;
+        width: 100% !important;
         margin-bottom: 2px !important;
     }
 
@@ -41,6 +41,48 @@
     .hr-div-display-info{
         display: flex !important;
         justify-content: space-between !important;
+        /* margin-top: 250px !important; */
+    }
+
+    .optional{
+        height: max-content !important;
+        margin-top: 10px !important;
+    }
+
+    .descript{
+        text-align: center;
+    }
+
+    .columm-50{
+        display: flex !important;
+        flex-direction: column !important;
+        width: 50% !important;
+        float: left !important;
+    }
+
+    .columm-30{
+        display: flex !important;
+        flex-direction: column !important;
+        width: 30% !important;
+        float: left !important;
+    }
+
+
+    .columm-70{
+        display: flex !important;
+        flex-direction: column !important;
+        width: 70% !important;
+        float: left !important;
+    }
+
+    hr {
+    width: 40% !important;
+    float: left !important;
+    }
+
+    .hr-div-get{
+        display: flex !important;
+        justify-content: space-between !important;
         margin-top: 250px !important;
     }
 
@@ -53,6 +95,28 @@
         text-align: center;
     }
 
+
+    .descript-div{
+        max-width: 444px !important;
+    }
+
+    span.red-ui-typedInput-type-label {
+    /* background: chartreuse; */
+    /* display: block; */
+    width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    }
+
+    .btn-aln{
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        /* padding-left: 30px; */
+        align-content: center;
+        align-items: flex-end;
+    }
+
 </style>
 
 <script type="text/html" data-template-name="display_info">
@@ -61,11 +125,29 @@
             Instructions to be shown in the jig diplay.
         </strong>
     </div>
+    <div style=" position: relative; display:flex;">
+        <div class="form-row columm-70">
+            <label style="width: 50% !important;" for="node-input-name" ><i class="fa fa-tag"></i> Identification Note</label>
+            <input type="text" id="node-input-name" placeholder="Name" style="width: 100%">
+        </div>
+        <!-- <div class="form-row columm-30" style="align-items: flex-end !important;">
+            <label style="width: max-content !important; padding-right: 24px;"><i class="fa fa-list-ul"></i> Item</label>
+            <div class="form-row btn-aln" >
+                <a id="addSetPhase" class="red-ui-button" ><i class="fa fa-plus"></i></a>
+                <a id="remSetPhase" class="red-ui-button" style="margin-right: 5px;" ><i class="fa fa-minus"></i></a>
+            </div>
+        </div> -->
+    </div>
+    <div class="hr-div-display-info">
+        <hr>
+        <span class="optional">Display Info</span>
+        <hr>
+    </div>
     <div class="form-row columm  node-input-msg_info ">  
         <label for="node-input-msg_info"><i class="fa fa-random"></i> msg_info </label>
         <textarea style="width: 70%; !important" type="text" id="node-input-msg_info"></textarea>
     </div>
-    <div class="hr-div-display-info">
+    <!-- <div class="hr-div-display-info">
         <hr>
         <span class="optional">Optional</span>
         <hr>
@@ -73,7 +155,7 @@
     <div class="form-row columm">
         <label style="width: 50% !important;" for="node-input-name" ><i class="fa fa-tag"></i> Component Nickname</label>
         <input type="text" id="node-input-name" placeholder="Name">
-    </div>
+    </div> -->
 </script>
 
 <script type="text/html" data-help-name="display_info">
